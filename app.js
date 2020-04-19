@@ -41,7 +41,7 @@ function managerQuestions(){ inquirer.prompt([
         type: "input"
     }
 ]).then(function(answers){
-    const manager = new Manager(answers.name, answers.email, answers.id, answers.officeNumber)
+    const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber)
     teamMembers.push(manager)
     createTeam()
 })
@@ -93,7 +93,7 @@ function engineerQuestions(){ inquirer.prompt([
         type: "input"
     }
 ]).then(function(answers){
-    const engineer = new Engineer(answers.name, answers.email, answers.id, answers.github)
+    const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
     teamMembers.push(engineer)
     createTeam()
 })
@@ -122,7 +122,7 @@ function internQuestions(){ inquirer.prompt([
         type: "input"
     }
 ]).then(function(answers){
-    const intern = new Intern(answers.name, answers.email, answers.id, answers.school)
+    const intern = new Intern(answers.name, answers.id, answers.email, answers.school)
     teamMembers.push(intern)
     createTeam()
 })
